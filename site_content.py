@@ -73,8 +73,34 @@ def place(url,html=None):
         if urlsplit(image).path.startswith('/images/') and urlsplit(image).path.lower().endswith(('.jpg','.jpeg','.png','.webp')) and image not in images: images.append(image)
     if not images: raise ValueError('No site-hosted photo available.')
     return dict(title=title,summary=summary,source_url=url,images=images)
+def short_description(item):
+    # Keep source facts and English prose, with at most two complete sentences.
+    text=' '.join(item['summary'].split())
+    sentences=re.split(r'(?<=[.!?])\s+',text)
+    selected=[]
+    for sentence in sentences[:2]:
+        if len(' '.join([*selected,sentence]))>450:break
+        selected.append(sentence)
+    result=' '.join(selected)
+    if not result: raise ValueError('A concise English description is required.')
+    if result[-1] not in '.!?': result+='.'
+    return result
+
+def hashtags(item):
+    import unicodedata
+    title=unicodedata.normalize('NFKD',item['title']).encode('ascii','ignore').decode()
+    place_tag=''.join(re.findall(r'[A-Za-z0-9]+',title))
+    if not place_tag:raise ValueError('A place hashtag is required.')
+    slug=urlsplit(item['source_url']).path.lower()
+    extra='#IstanbulTravel'
+    if 'muzesi' in slug or 'museum' in slug: extra='#IstanbulMuseums'
+    elif 'camii' in slug:extra='#IstanbulArchitecture'
+    elif 'sarayi' in slug or 'ayasofya' in slug:extra='#IstanbulHistory'
+    elif 'bosphorus' in slug or 'bogaz' in slug:extra='#Bosphorus'
+    return f'#istanbul #istanbulhighlights #events #{place_tag} {extra}'
+
 def caption(item):
-    return f"{item['title']}\n\n{item['summary']}\n\nDiscover more at istanbulhighlights.com\n{item['source_url']}\n\n#Istanbul #IstanbulHighlights #VisitIstanbul"
+    return f"{short_description(item)}\n\nDiscover more at istanbulhighlights.com\n{item['source_url']}\n\n{hashtags(item)}"
 def photo(url):
     data=fetch(url,15*1024*1024)
     with Image.open(io.BytesIO(data)) as image:
