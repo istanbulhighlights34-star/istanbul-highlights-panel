@@ -25,7 +25,7 @@ class AutomationTests(unittest.TestCase):
     def test_only_english_site_photos(self):
         item=site_content.place('https://istanbulhighlights.com/en/ayasofya',HTML)
         self.assertEqual(len(item['images']),2)
-        self.assertIn('Discover more at istanbulhighlights.com',site_content.caption(item))
+        self.assertIn('Discover more at https://istanbulhighlights.com — link in bio.',site_content.caption(item))
         self.assertLess(len(item['summary']),450)
         with self.assertRaises(ValueError):site_content.place('https://istanbulhighlights.com/en/x',HTML.replace('lang="en"','lang="tr"'))
         for url in ['http://istanbulhighlights.com/images/x.jpg','https://istanbulhighlights.com.evil.test/x','https://elsewhere.test/x','https://istanbulhighlights.com:444/x','https://user@istanbulhighlights.com/x']:
