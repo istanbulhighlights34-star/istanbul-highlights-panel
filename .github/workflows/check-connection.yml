@@ -25,4 +25,13 @@ jobs:
           IG_USERNAME: istanbul.highlights
           IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
           IG_SESSION: ${{ secrets.IG_SESSION }}
-        run: python instagram_connection.py
+        run: |
+          python - <<'PY'
+          import os
+          import sys
+          missing = [key for key in ('IG_PASSWORD', 'IG_SESSION') if not os.getenv(key, '').strip()]
+          if missing:
+              print('Missing private connection settings: ' + ', '.join(missing))
+              sys.exit(1)
+          PY
+          python instagram_connection.py
