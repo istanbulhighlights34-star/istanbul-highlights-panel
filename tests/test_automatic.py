@@ -63,3 +63,10 @@ class AutomationTests(unittest.TestCase):
                 ledger.return_value.rows.return_value=[]
                 html=client.get('/').data.decode()
                 self.assertIn('09:00',html);self.assertNotIn('type="file"',html)
+
+    def test_password_only_connection_never_publishes(self):
+        from instagram_connection import connect
+        client=Mock();client.account_info.return_value.username='istanbul.highlights'
+        with patch.dict(os.environ,{'IG_USERNAME':'istanbul.highlights','IG_PASSWORD':'test-only','IG_SESSION':''}):
+            self.assertIs(connect(lambda:client),client)
+        client.set_settings.assert_not_called();client.photo_upload.assert_not_called()
