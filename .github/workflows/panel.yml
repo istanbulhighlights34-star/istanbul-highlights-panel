@@ -11,6 +11,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   publish:
+    # Owner requested design review before any automatic publication.
+    if: vars.AUTO_PUBLISH_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
