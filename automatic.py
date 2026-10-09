@@ -12,6 +12,7 @@ import uuid
 from brand import render_free_design
 from ledger import Ledger
 import site_content
+from instagram_connection import connect
 HOURS=(9,11,17)
 ACCOUNT='istanbul.highlights'
 
@@ -50,7 +51,7 @@ def run(now=None,ledger=None,client_factory=None):
     if slot is None: print('Outside publication window.');return
     # Never build or consume a slot until the intended account is connected.
     if os.getenv('IG_USERNAME')!=ACCOUNT: raise RuntimeError('Connect the istanbul.highlights account first.')
-    if not all(os.getenv(k) for k in ('IG_PASSWORD','IG_SESSION')): raise RuntimeError('Instagram connection missing.')
+    if not os.getenv('IG_PASSWORD'): raise RuntimeError('Instagram connection missing.')
     ledger=ledger if ledger is not None else Ledger()
     job_id=str(uuid.uuid5(uuid.NAMESPACE_URL,'istanbul-highlights:'+slot.isoformat()))
     if ledger.get(job_id): print('This publication slot already has a record; no duplicate.');return
@@ -63,14 +64,7 @@ def run(now=None,ledger=None,client_factory=None):
         with tempfile.TemporaryDirectory(prefix='highlights-auto-') as folder:
             raw=Path(folder)/'site.jpg';final=Path(folder)/'branded.jpg';raw.write_bytes(content)
             render_free_design(raw,final,item['title'])
-            if not client_factory:
-                from instagrapi import Client
-                client_factory=Client
-            client=client_factory();settings=json.loads(os.environ['IG_SESSION'])
-            if not isinstance(settings,dict):raise ValueError('Invalid Instagram session.')
-            client.set_settings(settings);client.login(ACCOUNT,os.environ['IG_PASSWORD'])
-            actual=client.account_info().username
-            if actual.lower()!=ACCOUNT:raise RuntimeError('Instagram account identity mismatch.')
+            client=connect(client_factory)
             # Persist uploading BEFORE the remote upload, so retries cannot duplicate.
             if not ledger.change(job_id,'preparing',status='uploading'):return
             stage='uploading';media=client.photo_upload(str(final),post['caption'])
