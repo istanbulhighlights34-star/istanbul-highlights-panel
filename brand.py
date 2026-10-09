@@ -39,7 +39,7 @@ def render_free_design(source,destination,headline='Istanbul'):
     x=(1080-total)/2
     tracked_text(d,'ISTANBUL',x,97,first,spacing,'white')
     tracked_text(d,'HIGHLIGHTS',x+first_width+gap,97,second,spacing,GOLD)
-    subtitle=font(24);label='DISCOVER ISTANBUL';tracking=2.5
+    subtitle=font(28,True);label='DISCOVER ISTANBUL';tracking=2.5
     width=tracked_width(d,label,subtitle,tracking)
     tracked_text(d,label,(1080-width)/2,151,subtitle,tracking,'#D1D5DB')
     d.rectangle((49,209,1030,1110),outline=GOLD,width=2)
