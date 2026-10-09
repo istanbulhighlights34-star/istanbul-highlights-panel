@@ -51,7 +51,7 @@ def run(now=None,ledger=None,client_factory=None):
     if slot is None: print('Outside publication window.');return
     # Never build or consume a slot until the intended account is connected.
     if os.getenv('IG_USERNAME')!=ACCOUNT: raise RuntimeError('Connect the istanbul.highlights account first.')
-    if not os.getenv('IG_PASSWORD'): raise RuntimeError('Instagram connection missing.')
+    if not all(os.getenv(k) for k in ('IG_PASSWORD','IG_SESSION')): raise RuntimeError('A verified private Instagram session is required before scheduled publication.')
     ledger=ledger if ledger is not None else Ledger()
     job_id=str(uuid.uuid5(uuid.NAMESPACE_URL,'istanbul-highlights:'+slot.isoformat()))
     if ledger.get(job_id): print('This publication slot already has a record; no duplicate.');return
