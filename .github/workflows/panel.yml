@@ -1,0 +1,29 @@
+name: Istanbul Highlights automatic posts
+on:
+  schedule:
+    # UTC 06,08,14 = Istanbul 09,11,17. Later ticks recover delayed starts.
+    - cron: '0,15,30,45 6,8,14 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: istanbul-highlights-automatic
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r worker-requirements.txt
+      - name: Publish only the current unfilled slot
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          IG_USERNAME: istanbul.highlights
+          IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
+          IG_SESSION: ${{ secrets.IG_SESSION }}
+        run: python automatic.py

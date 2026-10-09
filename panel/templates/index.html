@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% block content %}
+<h1>İstanbul, her gün.</h1><p class="muted">@istanbul.highlights · Otomatik İngilizce paylaşımlar</p>
+<div class="card"><h2>Günlük yayın planı</h2><div class="row"><strong>09:00</strong><strong>11:00</strong><strong>17:00</strong></div><p class="muted help">İstanbul saati · Günde 3 fotoğraf gönderisi. Ücretsiz zamanlayıcı gecikebilir.</p></div>
+<div class="notice">Fotoğraf ve kısa bilgi yalnızca istanbulhighlights.com’un İngilizce yer sayfalarından alınır. Dosya yüklemene gerek yok.</div>
+<h2>Marka çerçevesi</h2><img class="preview" src="/preview.jpg" alt="İstanbul Highlights koyu lacivert ve altın çerçeve örneği"><p class="muted help">Bu örnek Instagram’a gönderilmez.</p>
+<h2>Yayın geçmişi</h2>{% if error %}<p class="error">{{error}}</p>{% endif %}
+{% if not posts %}<div class="card">Henüz yayın kaydı yok. Instagram bağlantısı tamamlanmadan otomatik paylaşım başlamaz.</div>{% endif %}
+{% for post in posts %}<div class="card"><small>{{post.scheduled_at|istanbul_time}} · İstanbul</small><h2>{{post.title}}</h2><p class="caption">{{post.caption}}</p><p class="status">{{{'preparing':'Hazırlanıyor','uploading':'Sonuç bekleniyor — yeniden gönderilmez','published':'Instagram yayını doğrulandı','failed':'Yayın başlamadı','uncertain':'Instagram hesabını kontrol et'}.get(post.status,post.status)}}</p>{% if post.error %}<p class="error">{{post.error}}</p>{% endif %}<a href="{{post.source_url}}" target="_blank" rel="noopener">Sitedeki yer sayfası</a>{% if post.instagram_url %}<p><a href="{{post.instagram_url}}" target="_blank" rel="noopener">Instagram’da aç</a></p>{% endif %}</div>{% endfor %}
+{% endblock %}
