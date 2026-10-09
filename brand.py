@@ -39,7 +39,7 @@ def render_free_design(source,destination,headline='Istanbul'):
     x=(1080-total)/2
     tracked_text(d,'ISTANBUL',x,97,first,spacing,'white')
     tracked_text(d,'HIGHLIGHTS',x+first_width+gap,97,second,spacing,GOLD)
-    subtitle=font(28,True);label='DISCOVER ISTANBUL';tracking=2.5
+    subtitle=font(36,True);label='DISCOVER ISTANBUL';tracking=2.5
     width=tracked_width(d,label,subtitle,tracking)
     tracked_text(d,label,(1080-width)/2,151,subtitle,tracking,'#D1D5DB')
     d.rectangle((49,209,1030,1110),outline=GOLD,width=2)
@@ -51,7 +51,6 @@ def render_free_design(source,destination,headline='Istanbul'):
         title+='…'
     d.text((540,1181),title,font=font(size,True),fill='white',anchor='mm')
     d.line((50,1230,1030,1230),fill=GOLD,width=2)
-    d.text((50,1260),'Discover more at',font=font(24),fill='#D1D5DB')
-    d.text((300,1254),'istanbulhighlights.com',font=font(34,True),fill=GOLD)
+    d.text((540,1280),'istanbulhighlights.com',font=font(34,True),fill=GOLD,anchor='mm')
     canvas.save(destination,'JPEG',quality=92)
     return True
