@@ -100,7 +100,7 @@ def hashtags(item):
     return f'#istanbul #istanbulhighlights #events #{place_tag} {extra}'
 
 def caption(item):
-    return f"{short_description(item)}\n\nDiscover more at istanbulhighlights.com\n{item['source_url']}\n\n{hashtags(item)}"
+    return f"{short_description(item)}\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n{hashtags(item)}"
 def photo(url):
     data=fetch(url,15*1024*1024)
     with Image.open(io.BytesIO(data)) as image:
