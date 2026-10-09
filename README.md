@@ -12,7 +12,7 @@ Daily **09:00, 11:00, 17:00 Europe/Istanbul** (UTC 06:00, 08:00, 14:00). GitHub 
 
 ## Connection
 
-In this repository's **Settings → Secrets and variables → Actions**, add `IG_PASSWORD` and `IG_SESSION` for **istanbul.highlights**. Never place these values in code, issues or publication-state.json. IG_SESSION is the JSON session exported by instagrapi for this account. The bot verifies the logged-in account username before uploading. This uses instagrapi, the same session approach as the earlier project, rather than Meta's official API. Login challenges may need account-owner action.
+In this repository's **Settings → Secrets and variables → Actions**, add `IG_PASSWORD` and `IG_SESSION` for **istanbul.highlights**. Never place these values in code, issues or publication-state.json. A saved IG_SESSION is required for unattended publishing after the password-only cloud test was throttled by Instagram. IG_SESSION is the JSON session exported by instagrapi for this account. The bot verifies the logged-in account username before uploading. This uses instagrapi, the same session approach as the earlier project, rather than Meta's official API. Login challenges may need account-owner action.
 
 Do not run Actions until the account secrets are ready. No successful connection or Instagram publication has been verified yet.
 
@@ -20,9 +20,9 @@ Do not run Actions until the account secrets are ready. No successful connection
 
 `publication-state.json` stores only public source URLs, English captions, times and publication status. GitHub's built-in workflow token writes these records atomically. A reservation is committed before Instagram is contacted; uploading is committed before the upload call. A timeout leaves `uncertain` or `uploading`; scheduled retries do not repeat it. If a state commit fails after successful upload, the earlier uploading reservation prevents duplicates. Check the Instagram account manually before any recovery. Once all destinations have been used, the bot rotates back to the least recently used places/photos.
 
-## Render panel
+## Optional Render monitor
 
-Deploy the Free Python web service using render.yaml. It is a password-protected, read-only monitor. Set `PANEL_PASSWORD` and a separate random `PANEL_SESSION_SECRET`. No Instagram password, Supabase account, paid database or storage is needed on Render. The panel reads publication metadata from the public repository. Free Render may sleep; this does not stop GitHub publication jobs. Status commits to main also trigger Render auto-deploy unless its automatic deploy is disabled after the initial deployment.
+The bot does not require Render or this monitor. If desired, deploy the Free Python web service using render.yaml. It is a password-protected, read-only monitor. Set `PANEL_PASSWORD` and a separate random `PANEL_SESSION_SECRET`. No Instagram password, Supabase account, paid database or storage is needed on Render. The panel reads publication metadata from the public repository. Free Render may sleep; this does not stop GitHub publication jobs. Status commits to main also trigger Render auto-deploy unless its automatic deploy is disabled after the initial deployment.
 
 ## Local preview and checks
 
@@ -31,3 +31,5 @@ Install `requirements.txt` in a venv, then run `python run_local.py`. The tempor
 ## Cost limits
 
 Render Free and public GitHub standard runners are used. Render free hours and bandwidth/build quotas still apply: https://render.com/docs/free. GitHub schedules can be delayed and public repository schedules can disable after inactivity: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule. No upgrade or paid service is enabled by this project.
+
+The local `export_instagram_session.py` helper asks for the password privately, handles owner-supplied verification codes, and writes a private ignored file. Never upload `private-connection/` to GitHub or attach its contents to chat. Store its JSON only in the IG_SESSION Actions secret. The cloud connection check on 2026-10-09 returned ClientThrottledError (HTTP 429); account access and publication have not been verified.
