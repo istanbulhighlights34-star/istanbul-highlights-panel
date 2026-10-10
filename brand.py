@@ -1,7 +1,7 @@
-"""Site-matched navy/gold editorial frame, no paid services."""
+"""Site-matched Bosphorus turquoise editorial frame, no paid services."""
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageOps
-NAVY='#0B0F19'; GOLD='#C5A059'
+PAPER='#F7FAF9'; INK='#173443'; ACCENT='#106773'; MUTED='#526775'
 def font(size,serif=False,bold=False):
     import base64,io
     name=('PlayfairDisplay-Bold' if bold else 'PlayfairDisplay-Regular') if serif else 'PlusJakartaSans-Regular'
@@ -18,16 +18,16 @@ def tracked_text(draw,text,x,baseline,face,spacing,fill):
     return x
 
 def logo(size=120):
-    image=Image.new('RGBA',(size,size),NAVY);d=ImageDraw.Draw(image)
-    d.ellipse((size*.13,size*.13,size*.87,size*.87),outline=GOLD,width=max(1,round(size*.02)))
+    image=Image.new('RGBA',(size,size),PAPER);d=ImageDraw.Draw(image)
+    d.ellipse((size*.13,size*.13,size*.87,size*.87),outline=ACCENT,width=max(1,round(size*.02)))
     f=font(round(size*.33),True);box=d.textbbox((0,0),'IH',font=f)
-    d.text(((size-box[2])/2,(size-box[3])/2-box[1]),'IH',font=f,fill=GOLD)
+    d.text(((size-box[2])/2,(size-box[3])/2-box[1]),'IH',font=f,fill=ACCENT)
     return image
 
 def render_free_design(source,destination,headline='Istanbul'):
     with Image.open(source) as image:
         photo=ImageOps.fit(ImageOps.exif_transpose(image).convert('RGB'),(980,900))
-    canvas=Image.new('RGB',(1080,1350),NAVY);canvas.paste(photo,(50,210));d=ImageDraw.Draw(canvas)
+    canvas=Image.new('RGB',(1080,1350),PAPER);canvas.paste(photo,(50,210));d=ImageDraw.Draw(canvas)
     # Match the site's single-line uppercase, bold/regular serif wordmark.
     size=52
     while True:
@@ -37,20 +37,20 @@ def render_free_design(source,destination,headline='Istanbul'):
         if total<=980:break
         size-=1
     x=(1080-total)/2
-    tracked_text(d,'ISTANBUL',x,97,first,spacing,'white')
-    tracked_text(d,'HIGHLIGHTS',x+first_width+gap,97,second,spacing,GOLD)
+    tracked_text(d,'ISTANBUL',x,97,first,spacing,INK)
+    tracked_text(d,'HIGHLIGHTS',x+first_width+gap,97,second,spacing,ACCENT)
     subtitle=font(36,True);label='DISCOVER ISTANBUL';tracking=2.5
     width=tracked_width(d,label,subtitle,tracking)
-    tracked_text(d,label,(1080-width)/2,151,subtitle,tracking,'#D1D5DB')
-    d.rectangle((49,209,1030,1110),outline=GOLD,width=2)
+    tracked_text(d,label,(1080-width)/2,151,subtitle,tracking,MUTED)
+    d.rectangle((49,209,1030,1110),outline=ACCENT,width=2)
     size=52
     while size>24 and d.textlength(headline,font=font(size,True))>980: size-=2
     title=headline
     if d.textlength(title,font=font(size,True))>980:
         while d.textlength(title+'…',font=font(size,True))>980: title=title[:-1]
         title+='…'
-    d.text((540,1181),title,font=font(size,True),fill='white',anchor='mm')
-    d.line((50,1230,1030,1230),fill=GOLD,width=2)
-    d.text((540,1280),'istanbulhighlights.com',font=font(34,True),fill=GOLD,anchor='mm')
+    d.text((540,1181),title,font=font(size,True),fill=INK,anchor='mm')
+    d.line((50,1230,1030,1230),fill=ACCENT,width=2)
+    d.text((540,1280),'istanbulhighlights.com',font=font(34,True),fill=ACCENT,anchor='mm')
     canvas.save(destination,'JPEG',quality=92)
     return True
