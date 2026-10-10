@@ -5,13 +5,15 @@
       "id": "1b336aa8-394f-5091-bfb0-1d6b242d22ef",
       "scheduled_at": "2026-10-10T09:00:00+03:00",
       "created_at": "2026-10-10T06:19:13.016543+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Ciragan Palace",
       "caption": "An Ottoman palace frontage with a contemporary hotel life on the Bosphorus.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #CiraganPalace #IstanbulHistory",
       "source_url": "https://istanbulhighlights.com/en/ciragan-sarayi",
       "image_url": "https://istanbulhighlights.com/images/discover-ciragan-sarayi-1.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/DeTbKRxvbi7/",
+      "error": null,
+      "media_id": "4004663947201198267",
+      "published_at": "2026-10-10T06:19:32.529987+00:00"
     }
   ]
 }
