@@ -75,13 +75,15 @@
       "id": "35756534-5db5-56f4-82df-416535ca2cf9",
       "scheduled_at": "2026-10-11T17:00:00+03:00",
       "created_at": "2026-10-11T14:14:13.884355+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Aya Yorgi Church",
       "caption": "A quiet Greek Orthodox pilgrimage and viewpoint among the pines and sea above Buyukada.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #AyaYorgiChurch #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/aya-yorgi",
       "image_url": "https://istanbulhighlights.com/images/aya-yorgi-wide.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/DeW2UVMv9FE/",
+      "error": null,
+      "media_id": "4005627810256245060",
+      "published_at": "2026-10-11T14:14:33.740265+00:00"
     }
   ]
 }
