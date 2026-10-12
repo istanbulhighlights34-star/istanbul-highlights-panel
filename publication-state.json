@@ -103,13 +103,15 @@
       "id": "3d9758ec-1426-5671-bd96-aa2c4bfb86f8",
       "scheduled_at": "2026-10-12T11:00:00+03:00",
       "created_at": "2026-10-12T08:20:34.448006+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Yıldız Palace",
       "caption": "Pavilions, court life, private gardens and the legacy of Sultan Abdülhamid II.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #YldzPalace #IstanbulHistory",
       "source_url": "https://istanbulhighlights.com/en/yildiz-sarayi",
       "image_url": "https://istanbulhighlights.com/images/yildiz-palace.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/DeYyo7pPk67/",
+      "error": null,
+      "media_id": "4006174583693397691",
+      "published_at": "2026-10-12T08:20:54.693649+00:00"
     }
   ]
 }
