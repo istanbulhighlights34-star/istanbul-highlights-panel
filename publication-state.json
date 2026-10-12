@@ -89,13 +89,15 @@
       "id": "c0789e3a-9506-5674-a6bc-5bfe1e2ca164",
       "scheduled_at": "2026-10-12T09:00:00+03:00",
       "created_at": "2026-10-12T06:24:33.339400+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Kalamis",
       "caption": "Kalamış offers an open, maritime landscape on Istanbul's Asian side. The marina, coastal parks and surrounding streets form a quieter counterpart to central Kadıköy.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #Kalamis #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/kalamis",
       "image_url": "https://istanbulhighlights.com/images/discover-kalamis-3.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/DeYlXEvPIdv/",
+      "error": null,
+      "media_id": "4006116181902395247",
+      "published_at": "2026-10-12T06:24:52.101060+00:00"
     }
   ]
 }
