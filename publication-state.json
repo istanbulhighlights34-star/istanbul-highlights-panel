@@ -145,13 +145,15 @@
       "id": "1f2662ef-121c-5df0-b5b9-bbe1485080ee",
       "scheduled_at": "2026-10-13T11:00:00+03:00",
       "created_at": "2026-10-13T08:20:06.659597+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Bebek",
       "caption": "A sheltered Bosphorus bay, waterfront walks and neighbourhood cafés.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #Bebek #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/bebek",
       "image_url": "https://istanbulhighlights.com/images/discover-bebek-1.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/DebXYcovUUH/",
+      "error": null,
+      "media_id": "4006899128561648903",
+      "published_at": "2026-10-13T08:20:26.804874+00:00"
     }
   ]
 }
