@@ -20,7 +20,7 @@ def due_slot(now):
     local=now.astimezone(ZoneInfo('Europe/Istanbul'))
     for hour in reversed(HOURS):
         slot=local.replace(hour=hour,minute=0,second=0,microsecond=0)
-        if slot<=local<slot+timedelta(minutes=90): return slot
+        if slot<=local: return slot
     return None
 
 def select_content(slot,history):
