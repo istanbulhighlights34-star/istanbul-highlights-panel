@@ -1,8 +1,9 @@
 name: Istanbul Highlights automatic posts
 on:
   schedule:
-    # UTC 06,08,14 = Istanbul 09,11,17. Later ticks recover delayed starts.
-    - cron: '0,15,30,45 6,8,14 * * *'
+    # Owner explicitly approved frequent checks on Oct 17.
+    # Istanbul 09:07-23:47 every 20 minutes; Python limits publication to 09,11,17 slots.
+    - cron: '7,27,47 6-20 * * *'
   workflow_dispatch:
 permissions:
   contents: write
