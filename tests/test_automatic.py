@@ -20,8 +20,12 @@ class AutomationTests(unittest.TestCase):
         for utc_hour,local_hour in [(6,9),(8,11),(14,17)]:
             slot=automatic.due_slot(datetime.fromisoformat(f'2026-10-09T{utc_hour:02}:00:00+00:00'))
             self.assertEqual(slot.hour,local_hour)
-        for stamp in ['2026-10-09T05:59:00+00:00','2026-10-09T07:31:00+00:00','2026-10-09T16:00:00+00:00']:
+        for stamp in ['2026-10-09T05:59:00+00:00']:
             self.assertIsNone(automatic.due_slot(datetime.fromisoformat(stamp)))
+    def test_delayed_run_uses_only_latest_slot_today(self):
+        for stamp,hour in [('2026-10-15T11:09:00+00:00',11),('2026-10-16T17:54:00+00:00',17),('2026-10-17T10:24:00+00:00',11)]:
+            self.assertEqual(automatic.due_slot(datetime.fromisoformat(stamp)).hour,hour)
+        self.assertIsNone(automatic.due_slot(datetime.fromisoformat('2026-10-17T22:00:00+00:00')))
     def test_only_english_site_photos(self):
         item=site_content.place('https://istanbulhighlights.com/en/ayasofya',HTML)
         self.assertEqual(len(item['images']),2)
