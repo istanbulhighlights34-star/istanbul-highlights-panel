@@ -229,13 +229,15 @@
       "id": "c1e30b6e-8447-522e-aa35-0bdf63c24437",
       "scheduled_at": "2026-10-18T11:00:00+03:00",
       "created_at": "2026-10-18T10:54:19.938165+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Yoros Castle",
       "caption": "Byzantine ruins above Anadolu Kavağı and the entrance to the Black Sea.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #YorosCastle #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/yoros-kalesi",
       "image_url": "https://istanbulhighlights.com/images/discover-yoros-kalesi-1.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/DeohAkbvjAs/",
+      "error": null,
+      "media_id": "4010600642828447788",
+      "published_at": "2026-10-18T10:54:40.613195+00:00"
     }
   ]
 }
