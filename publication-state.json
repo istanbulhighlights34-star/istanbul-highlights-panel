@@ -238,6 +238,18 @@
       "error": null,
       "media_id": "4010600642828447788",
       "published_at": "2026-10-18T10:54:40.613195+00:00"
+    },
+    {
+      "id": "fda5986e-6e47-5f50-b12b-f88256a9061d",
+      "scheduled_at": "2026-10-18T17:00:00+03:00",
+      "created_at": "2026-10-18T14:29:53.426875+00:00",
+      "status": "preparing",
+      "title": "Cagaloglu Bath",
+      "caption": "A historic Ottoman bath beneath luminous domes and marble arches.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #CagalogluBath #IstanbulTravel",
+      "source_url": "https://istanbulhighlights.com/en/cagaloglu-hamami",
+      "image_url": "https://istanbulhighlights.com/images/discover-cagaloglu-hamami-1.webp",
+      "instagram_url": null,
+      "error": null
     }
   ]
 }
