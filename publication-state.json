@@ -369,13 +369,15 @@
       "id": "82b77b05-a9a1-5878-a065-f8ff4bfa09e0",
       "scheduled_at": "2026-10-23T11:00:00+03:00",
       "created_at": "2026-10-23T11:29:18.843975+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Maiden's Tower",
       "caption": "A small island landmark off Uskudar, carrying both the romance and defensive memory of Istanbul.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #MaidensTower #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/kiz-kulesi",
       "image_url": "https://istanbulhighlights.com/images/kiz-kulesi-hero.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/De1c_L2vKXF/",
+      "error": null,
+      "media_id": "4014242130229503429",
+      "published_at": "2026-10-23T11:29:41.301421+00:00"
     }
   ]
 }
