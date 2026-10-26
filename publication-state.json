@@ -453,13 +453,15 @@
       "id": "b7f6e79b-f5a9-5112-8bec-b9384c1788df",
       "scheduled_at": "2026-10-26T11:00:00+03:00",
       "created_at": "2026-10-26T12:48:05.209253+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Beylerbeyi Palace",
       "caption": "An ornate imperial summer residence beneath the Bosphorus bridge.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #BeylerbeyiPalace #IstanbulHistory",
       "source_url": "https://istanbulhighlights.com/en/beylerbeyi-sarayi",
       "image_url": "https://istanbulhighlights.com/images/discover-beylerbeyi-sarayi-1.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/De9UYzdP7LE/",
+      "error": null,
+      "media_id": "4016456108133561028",
+      "published_at": "2026-10-26T12:48:27.781645+00:00"
     }
   ]
 }
