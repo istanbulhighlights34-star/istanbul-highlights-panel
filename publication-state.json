@@ -481,13 +481,15 @@
       "id": "3cc93dc5-0e22-5c9d-bac8-86638aaa8e69",
       "scheduled_at": "2026-10-27T11:00:00+03:00",
       "created_at": "2026-10-27T12:00:34.453324+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Haydarpasa Station",
       "caption": "A monumental station on the Kadikoy shore, remembered as Istanbul's railway gateway to the east.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #HaydarpasaStation #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/haydarpasa-gari",
       "image_url": "https://istanbulhighlights.com/images/haydarpasa-sunset.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/De_zvpdPzCm/",
+      "error": null,
+      "media_id": "4017156967339339942",
+      "published_at": "2026-10-27T12:00:56.519459+00:00"
     }
   ]
 }
