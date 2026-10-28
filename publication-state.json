@@ -504,6 +504,18 @@
       "error": null,
       "media_id": "4017334902306366193",
       "published_at": "2026-10-27T17:54:26.890714+00:00"
+    },
+    {
+      "id": "697ef70d-44a2-519c-977b-324ed31b527b",
+      "scheduled_at": "2026-10-28T11:00:00+03:00",
+      "created_at": "2026-10-28T12:40:48.066492+00:00",
+      "status": "preparing",
+      "title": "Khedive Pavilion",
+      "caption": "An early-twentieth-century villa surrounded by the wooded slopes of Çubuklu.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #KhedivePavilion #IstanbulTravel",
+      "source_url": "https://istanbulhighlights.com/en/hidiv-kasri",
+      "image_url": "https://istanbulhighlights.com/images/discover-hidiv-kasri-1.webp",
+      "instagram_url": null,
+      "error": null
     }
   ]
 }
