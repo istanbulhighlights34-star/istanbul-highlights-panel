@@ -635,13 +635,15 @@
       "id": "d8c524bd-5e49-5c49-bb81-8e3e1800ed25",
       "scheduled_at": "2026-11-01T17:00:00+03:00",
       "created_at": "2026-11-01T18:27:47.719152+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Miniaturk",
       "caption": "An open-air museum where the landmarks of Turkey meet in one park and Istanbul can be read in miniature.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #Miniaturk #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/minaturk",
       "image_url": "https://istanbulhighlights.com/images/miniaturk-hero.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/DfNYCD6PDG0/",
+      "error": null,
+      "media_id": "4020975737065189812",
+      "published_at": "2026-11-01T18:28:07.901444+00:00"
     }
   ]
 }
