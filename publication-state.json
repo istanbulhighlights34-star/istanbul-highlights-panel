@@ -705,13 +705,15 @@
       "id": "9f8b322f-45fd-55f2-881b-5e7de7df20c3",
       "scheduled_at": "2026-11-06T17:00:00+03:00",
       "created_at": "2026-11-06T14:08:53.827461+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Galata Tower",
       "caption": "A stone landmark that brings the Golden Horn, the Bosphorus and the Historic Peninsula into one view.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #GalataTower #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/galata-kulesi",
       "image_url": "https://istanbulhighlights.com/images/galata-tower-panorama.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/DfZyYCLvXEy/",
+      "error": null,
+      "media_id": "4024469295969694002",
+      "published_at": "2026-11-06T14:09:12.702737+00:00"
     }
   ]
 }
