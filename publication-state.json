@@ -775,13 +775,15 @@
       "id": "f934bd6b-7802-5605-920e-d4e23a3f05eb",
       "scheduled_at": "2026-11-09T17:00:00+03:00",
       "created_at": "2026-11-09T16:00:24.268564+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Kuzguncuk",
       "caption": "Wooden houses, neighbourhood gardens and a many-faith heritage.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #Kuzguncuk #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/kuzguncuk",
       "image_url": "https://istanbulhighlights.com/images/discover-kuzguncuk-1.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/Dfhthqdv_s2/",
+      "error": null,
+      "media_id": "4026699767277943606",
+      "published_at": "2026-11-09T16:00:45.319384+00:00"
     }
   ]
 }
