@@ -859,13 +859,15 @@
       "id": "d7e42816-6f3a-5388-9a77-44e6d2a1208d",
       "scheduled_at": "2026-11-14T17:00:00+03:00",
       "created_at": "2026-11-14T18:46:55.928517+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Rumeli Fortress",
       "caption": "Mehmed II's fortress at the narrow passage of the Bosphorus.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #RumeliFortress #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/rumeli-hisari",
       "image_url": "https://istanbulhighlights.com/images/discover-rumeli-hisari-2.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/Dfu4j0YvE2O/",
+      "error": null,
+      "media_id": "4030407468579048846",
+      "published_at": "2026-11-14T18:47:17.449918+00:00"
     }
   ]
 }
