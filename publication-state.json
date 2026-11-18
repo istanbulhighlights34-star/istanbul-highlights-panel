@@ -929,13 +929,15 @@
       "id": "44e0628d-a923-5233-903a-141a43330459",
       "scheduled_at": "2026-11-18T17:00:00+03:00",
       "created_at": "2026-11-18T15:31:30.253010+00:00",
-      "status": "uploading",
+      "status": "published",
       "title": "Exclusive Destinations",
       "caption": "Explore Istanbul’s 27 most iconic landmarks, imperial palaces, historic mosques, and cultural treasures.\n\nDiscover more at https://istanbulhighlights.com — link in bio.\n\n#istanbul #istanbulhighlights #events #ExclusiveDestinations #IstanbulTravel",
       "source_url": "https://istanbulhighlights.com/en/destinations",
       "image_url": "https://istanbulhighlights.com/images/basilica-cistern-hero.webp",
-      "instagram_url": null,
-      "error": null
+      "instagram_url": "https://www.instagram.com/p/Df41XyzPwE0/",
+      "error": null,
+      "media_id": "4033208197870190900",
+      "published_at": "2026-11-18T15:31:50.433622+00:00"
     }
   ]
 }
